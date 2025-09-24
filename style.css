@@ -1,0 +1,154 @@
+:root{
+  /* Paleta unificada futurista (azul–cian–violeta) */
+  --bg:#070a13; --bg2:#0b1220;
+  --surface: rgba(180,200,255,0.04);
+  --text:#e8eeff; --muted:#9fb0d0;
+
+  --iris:#7c3aed;       /* violeta */
+  --cian:#22d3ee;       /* cian neon */
+  --sky:#0ea5e9;        /* azul cielo */
+  --ring:rgba(34,211,238,.25);
+  --border: color-mix(in oklab, var(--text), transparent 90%);
+}
+
+/* Base */
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  color:var(--text);
+  background:
+    radial-gradient(1200px 600px at 15% -10%, rgba(124,58,237,.16), transparent 60%),
+    radial-gradient(1000px 500px at 85% 10%, rgba(14,165,233,.16), transparent 60%),
+    linear-gradient(180deg,var(--bg),var(--bg2));
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+.section{padding:80px 0}
+.section-invert{background:color-mix(in oklab, var(--bg2), transparent 4%);border-top:1px solid var(--border)}
+.section-compact{padding:56px 0}
+
+/* Nav */
+.nav{
+  position:sticky; top:0; z-index:40;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:14px 20px; backdrop-filter: blur(12px);
+  background: color-mix(in oklab, var(--bg2), transparent 35%);
+  border-bottom: 1px solid var(--border);
+}
+.brand{font-weight:800; letter-spacing:.3px}
+.nav-links{display:flex; gap:12px; align-items:center}
+.nav-links a{padding:8px 10px; border-radius:10px}
+.nav-links a:hover{background:var(--surface)}
+
+/* Chips & headings */
+.chip{
+  display:inline-block; padding:6px 10px; border-radius:999px;
+  font-size:.72rem; letter-spacing:.3px; text-transform:uppercase;
+  border:1px solid var(--border); background:rgba(255,255,255,.04);
+}
+.chip-iris{border-color:#7c3aed55; background:#7c3aed1a; color:#dac9ff}
+.title-xl{font-size: clamp(2.2rem, 6vw, 3.6rem); margin:.35rem 0}
+
+/* Buttons */
+.btn-primary{
+  background: linear-gradient(135deg, var(--sky), var(--cian));
+  color:#061018; font-weight:800; padding:12px 16px; border-radius:14px;
+  box-shadow: 0 10px 28px var(--ring);
+}
+.btn-ghost{
+  border:1px solid var(--border); color:var(--text);
+  padding:12px 16px; border-radius:14px; background:transparent;
+}
+
+/* HERO (OPIFEX principal) */
+.section-hero{position:relative}
+.hero-grid{
+  display:grid; grid-template-columns: 1.05fr 1fr; gap:26px; align-items:center;
+}
+.lead{color:var(--muted); max-width:56ch}
+.cta-row{display:flex; gap:12px; margin-top:14px}
+.kpis{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap}
+.kpi{
+  background: var(--surface); border:1px solid var(--border);
+  border-radius:14px; padding:12px 14px; min-width: 150px; text-align:center;
+}
+.kpi .n{font-weight:900; font-size:1.35rem; background: linear-gradient(135deg,var(--cian),var(--iris));
+  -webkit-background-clip:text; background-clip:text; color:transparent}
+.kpi .l{color:var(--muted); font-size:.82rem; margin-top:2px}
+
+/* Consola de código */
+.console{
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  background: rgba(255,255,255,.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(0,0,0,.45);
+}
+.console-bar{
+  height:18px;
+  background: linear-gradient(90deg, var(--iris), var(--sky));
+  opacity:.85;
+}
+.console-body{
+  padding:16px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size:13px;
+  line-height:1.6;
+}
+
+
+/* Features de OPIFEX */
+.section-features{padding-top:0}
+.features{display:grid; grid-template-columns:repeat(12,1fr); gap:14px}
+.feature{
+  grid-column: span 12; background: var(--surface);
+  border:1px solid var(--border); border-radius:16px; padding:16px;
+}
+.feature h3{margin:4px 0 6px}
+.feature p{color:var(--muted)}
+@media (min-width: 860px){ .feature{grid-column: span 4} }
+
+/* Stack fusionado */
+.stack-grid{display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:16px}
+.stack-card{
+  grid-column: span 12; background: var(--surface);
+  border:1px solid var(--border); border-radius:16px; padding:18px;
+}
+.stack-card h3{margin:0 0 10px}
+.pill-list{display:flex; flex-wrap:wrap; gap:8px; list-style:none; padding:0; margin:0}
+.pill-list li{padding:6px 10px; border-radius:999px; background:rgba(255,255,255,.06); border:1px solid var(--border)}
+@media (min-width: 820px){ .stack-card{grid-column: span 4} }
+
+/* Roadmap simple (sin timeline) */
+.roadmap-cards{
+  display:grid; grid-template-columns:repeat(12,1fr); gap:14px; margin-top:16px
+}
+.rm-card{
+  grid-column: span 12; background: var(--surface);
+  border:1px solid var(--border); border-radius:16px; padding:16px;
+}
+.rm-card h3{margin:0 0 6px}
+.rm-card p{color:var(--muted)}
+@media (min-width: 820px){ .rm-card{grid-column: span 4} }
+
+/* Footer */
+.footer{
+  padding:36px 0; text-align:center;
+  border-top:1px solid var(--border); background:color-mix(in oklab, var(--bg2), transparent 0%)
+}
+
+/* Accessibility & responsive */
+:focus-visible{outline:2px solid var(--cian); outline-offset:2px; border-radius:8px}
+html{scroll-behavior:smooth}
+@media (max-width: 900px){ .hero-grid{grid-template-columns:1fr} }
+@media (prefers-reduced-motion: reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+}
+/* Fallback si AOS no cargó: mostrar todo normalmente */
+.no-aos [data-aos] {
+  opacity: 1 !important;
+  transform: none !important;
+}
