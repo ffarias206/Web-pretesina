@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OPIFEX · Francisco Farias</title>
+
+  <!-- Estilos y AOS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="brand" href="#opifex">OPIFEX</a>
+    <nav class="nav-links">
+      <a href="#opifex">Proyecto</a>
+      <a href="#about">Sobre mí</a>
+      <a href="#stack">Stack & Roadmap</a>
+      <a href="#contacto" class="btn-primary">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- OPIFEX — sección protagonista (SIN CAMBIOS) -->
+  <section id="opifex" class="section section-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy" data-aos="fade-up">
+        <span class="chip chip-iris">Proyecto destacado</span>
+        <h1 class="title-xl">OPIFEX</h1>
+        <p class="lead">
+          Orquestación inteligente para impresiones 3D: predicción de fallos, colas adaptativas y métricas en vivo,
+          todo en una sola consola.
+        </p>
+        <div class="cta-row" data-aos="zoom-in" data-aos-delay="120">
+          <a class="btn-primary" href="#">Probar demo</a>
+          <a class="btn-ghost" href="#">Documentación</a>
+        </div>
+
+        <div class="kpis" data-aos="fade-up" data-aos-delay="180">
+          <div class="kpi"><div class="n">+28%</div><div class="l">Éxito 1º intento</div></div>
+          <div class="kpi"><div class="n">-32%</div><div class="l">Tiempo ocioso</div></div>
+          <div class="kpi"><div class="n">-18%</div><div class="l">Material</div></div>
+        </div>
+      </div>
+
+      <!-- Consola “código escribiéndose” -->
+      <div class="console" data-aos="fade-left" data-aos-delay="80">
+        <div class="console-bar"></div>
+        <pre class="console-body"><code id="typing-code"></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPIFEX — features (SIN CAMBIOS) -->
+  <section class="section section-features">
+    <div class="container">
+      <div class="features">
+        <article class="feature" data-aos="fade-up">
+          <h3>Perfiles auto-tune</h3>
+          <p>Ajuste dinámico por material/boquilla/temperatura con aprendizaje continuo del historial.</p>
+        </article>
+        <article class="feature" data-aos="fade-up" data-aos-delay="100">
+          <h3>Colas inteligentes</h3>
+          <p>Orquestación multi-impresora con mantenimiento preventivo y reintentos seguros.</p>
+        </article>
+        <article class="feature" data-aos="fade-up" data-aos-delay="200">
+          <h3>Insights en vivo</h3>
+          <p>Panel con fallos probables, capas críticas y consumo estimado de tiempo/material.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SOBRE MÍ -->
+  <section id="about" class="section section-compact">
+    <div class="container">
+      <header class="section-head" data-aos="fade-up">
+        <span class="chip">Sobre mí</span>
+        <h2>Francisco Farias</h2>
+        <p class="muted">
+          Soy estudiante de secundaria con foco en tecnología y desarrollo web.
+          Manejo <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript (básico)</strong>, y utilizo <strong>PHP</strong> para proyectos
+          académicos y personales (formularios, procesamiento de datos y pequeños paneles).
+          Me gusta aprender construyendo: aplico lo que estudio en proyectos reales como <strong>Opifex</strong>,
+          aportando tanto en la parte técnica como en la organización del trabajo.
+        </p>
+      </header>
+    </div>
+  </section>
+
+  <!-- STACK & ROADMAP juntos -->
+  <section id="stack" class="section">
+    <div class="container">
+      <header class="section-head" data-aos="fade-right">
+        <span class="chip">Perfil técnico</span>
+        <h2>Stack & Roadmap</h2>
+        <p class="muted">Tecnologías aplicadas y próximos pasos del proyecto.</p>
+      </header>
+
+      <!-- Stack -->
+      <div class="stack-grid">
+        <div class="stack-card" data-aos="fade-up">
+          <h3>Frontend</h3>
+          <ul class="pill-list">
+            <li>HTML5</li><li>CSS3</li><li>JS (básico)</li><li>AOS</li>
+          </ul>
+        </div>
+        <div class="stack-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Backend & Datos</h3>
+          <ul class="pill-list">
+            <li>PHP</li><li>Supabase</li><li>REST</li><li>Auth</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="stack-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Habilidades blandas</h3>
+          <ul class="pill-list">
+            <li>Buena comunicación</li>
+            <li>Empatía</li>
+            <li>Liderazgo</li>
+            <li>Trabajo en equipo</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Roadmap integrado -->
+      <div class="roadmap-cards">
+        <div class="rm-card" data-aos="fade-up">
+          <h3>MVP estable</h3>
+          <p>Colas adaptativas + reintentos + panel de métricas base.</p>
+        </div>
+        <div class="rm-card" data-aos="fade-up" data-aos-delay="100">
+          <h3>Predicción mejorada</h3>
+          <p>Modelos ligeros para fallos por geometría y material.</p>
+        </div>
+        <div class="rm-card" data-aos="fade-up" data-aos-delay="200">
+          <h3>Integraciones</h3>
+          <p>Perfiles .ini y puentes con slicers/OctoPrint.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contacto" class="footer" data-aos="fade-up">
+    <div class="container">
+      <p><strong>Contacto:</strong> <a href="mailto:correo@ejemplo.com">ffarias206@cesd.edu.ar
+        Ig:fraannfariaass
+      </a></p>
+      <p class="muted">© <span id="y"></span> Francisco Farias </p>
+    </div>
+  </footer>
+
+</body>
+</html>
